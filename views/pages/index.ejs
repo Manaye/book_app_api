@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+</head>
+<link rel="stylesheet" href="/public/styles/base.css">
+<body class="container">
+<link rel="stylesheet" href="/styles/base.css">
+<header>
+    <h1>Best books!</h1>
+</header>
+
+<main>        
+        <section class="book-view container">
+            <p>we have <%= results.length%> books</p>
+            <ul id="book-list">
+              <% results.forEach(book => { 
+                  console.log('book', book); %>
+                <li class="book-item" data-id="<%= book.id %>">
+                  <h1><%= book.title %></h1>
+                  <p> <strong>Author</strong> : <%= book.author %></p>
+                  <p> <strong>Isbn</strong>: <%= book.isbn %></p>
+                   <img src =<%= book.image_url %>> 
+                  <p> <strong>description</strong>: <%= book.description %></p>
+                  <a href="/books/book/<%= book.id%>">View Details</a>
+                </li>
+                <% }) %>
+              </ul>     
+          </section>
+   </main>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+<footer>
+    
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+body{
+    background-color: red;
+}
+
+header{
+    background-color: black;
+    color: white;
+}
+header h1 {
+    color: red;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "book_app",
+  "version": "1.0.0",
+  "description": "**Author**: Hiwot & Shalom \r **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manaye/book_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manaye/book_app/issues"
+  },
+  "homepage": "https://github.com/Manaye/book_app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "pg": "^7.6.0",
+    "superagent": "^4.0.0-beta.5"
+  },
+  "devDependencies": {}
+}
