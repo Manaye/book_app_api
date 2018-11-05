@@ -22,6 +22,7 @@ app.post('/',addBook);
 
 app.get('/', getBook);
 app.get('/books/book/:book_id', getOneBook);
+app.get('books/book/edit/:id', updateBook);
 app.post('/searches',createSearch);
 
 app.listen(PORT,function(){
@@ -74,7 +75,17 @@ function getOneBook(req, res){
   //   res.render('pages/books/detail', {books: results.rows});
   // });
 }
+function updateBook(req, res){
+  let sql = 'SELECT * FROM booksshelf WHERE id=$1;';
+  let values = [req.params.book_id];
 
+  return client.query(sql, values).then(result => res.render('pages/books/edit', {book: result.rows[0]})).catch(handleError);
+
+  // return client.query(sql).then(results =>{
+  //   console.log(results);
+  //   res.render('pages/books/detail', {books: results.rows});
+  // });
+}
 // add normaliztion here  to add sql 
  
 function newSearch(req,res){
